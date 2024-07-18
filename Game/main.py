@@ -1,11 +1,13 @@
 import pygame
-
+from Extra import Extra
 # pygame setup
 pygame.init()
 screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
 running = True
 dt = 0
+
+
 
 player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
@@ -18,9 +20,11 @@ while running:
 
     # fill the screen with a color to wipe away anything from last frame
     screen.fill("purple")
-
+    p = pygame.Rect(0, 0, 40, 40)
+    pygame.draw.rect(screen, "blue", p)
+    pygame.draw.rect
     pygame.draw.circle(screen, "red", player_pos, 40)
-
+    print(player_pos)
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:
         player_pos.y -= 300 * dt
