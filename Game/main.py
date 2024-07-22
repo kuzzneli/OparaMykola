@@ -28,6 +28,7 @@ while running:
 
     # fill the screen with a color to wipe away anything from last frame
     screen.fill("purple")
+
     # Змінюємо напрям, в якому буде ходити змійка
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:
