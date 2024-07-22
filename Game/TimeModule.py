@@ -2,9 +2,11 @@ import time
 
 
 class Time:
-    def __init__(self, countdown):
-        self.time = time.time()
-        self.countdown = countdown
+    myTime = time.time()
 
-    def getPassedTime(self):
-        return time.time() - self.time
+    def getPassedTimeFromStart(self):
+        return time.time() - self.myTime
+
+    def resetTime(self):
+        self.myTime = time.time()
+
